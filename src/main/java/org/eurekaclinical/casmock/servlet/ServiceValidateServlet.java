@@ -19,8 +19,11 @@ package org.eurekaclinical.casmock.servlet;
  * limitations under the License.
  * #L%
  */
-
+import java.io.BufferedReader;
 import java.io.IOException;
+import java.io.InputStreamReader;
+import java.net.URL;
+import javax.net.ssl.HttpsURLConnection;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -32,7 +35,9 @@ import org.arp.javautil.io.IOUtil;
  * @author Andrew Post
  */
 public class ServiceValidateServlet extends HttpServlet {
+
     private String response;
+    private String responseWithPGTIOU;
 
     @Override
     public void init() throws ServletException {
@@ -41,10 +46,39 @@ public class ServiceValidateServlet extends HttpServlet {
         } catch (IOException ex) {
             throw new AssertionError(ex);
         }
+
+        try {
+            this.responseWithPGTIOU = IOUtil.readResourceAsString(getClass(), "/xml/serviceResponseWithPGTIOU.xml");
+        } catch (IOException ex) {
+            throw new AssertionError(ex);
+        }
     }
-    
+
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        resp.getWriter().write(this.response);
+        String pgtUrlStr = req.getParameter("pgtUrl");
+        if (pgtUrlStr == null) {
+            resp.getWriter().write(this.response);
+        } else {
+            resp.getWriter().write(this.responseWithPGTIOU);
+            URL pgtUrl = new URL(pgtUrlStr);
+            doConnect(pgtUrl);
+
+            URL pgtUrlWithParams = new URL(pgtUrlStr + "?pgtIou=PGTIOU-xxxxxxxxxxxxxxxx&pgtId=TGT-xxxxxxxxxxxxxxxx");
+            doConnect(pgtUrlWithParams);
+        }
+    }
+
+    void doConnect(URL url) throws IOException {
+        HttpsURLConnection con = (HttpsURLConnection) url.openConnection();
+        try (BufferedReader in = new BufferedReader(new InputStreamReader(
+                con.getInputStream()))) {
+            while (in.readLine() != null) {
+            }
+        }
+        int code = con.getResponseCode();
+        if (code != 200) {
+            throw new IOException("Response from proxy callback URL was " + code);
+        }
     }
 }

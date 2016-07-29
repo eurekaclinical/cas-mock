@@ -31,13 +31,13 @@ import org.arp.javautil.io.IOUtil;
  *
  * @author Andrew Post
  */
-public class ProxyValidateServlet extends HttpServlet {
+public class ProxyServlet extends HttpServlet {
     private String response;
 
     @Override
     public void init() throws ServletException {
         try {
-            this.response = IOUtil.readResourceAsString(getClass(), "/xml/proxyValidateResponse.xml");
+            this.response = IOUtil.readResourceAsString(getClass(), "/xml/proxyResponse.xml");
         } catch (IOException ex) {
             throw new AssertionError(ex);
         }

@@ -37,6 +37,10 @@
     <servlet-class>org.eurekaclinical.casmock.servlet.ServiceValidateServlet</servlet-class>
   </servlet>
   <servlet>
+    <servlet-name>Proxy</servlet-name>
+    <servlet-class>org.eurekaclinical.casmock.servlet.ProxyServlet</servlet-class>
+  </servlet>
+  <servlet>
     <servlet-name>ProxyValidate</servlet-name>
     <servlet-class>org.eurekaclinical.casmock.servlet.ProxyValidateServlet</servlet-class>
   </servlet>
@@ -51,6 +55,10 @@
   <servlet-mapping>
     <servlet-name>ServiceValidate</servlet-name>
     <url-pattern>/serviceValidate</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>Proxy</servlet-name>
+    <url-pattern>/proxy</url-pattern>
   </servlet-mapping>
   <servlet-mapping>
     <servlet-name>ProxyValidate</servlet-name>
