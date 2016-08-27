@@ -28,7 +28,8 @@ import javax.servlet.http.HttpServletResponse;
 import org.arp.javautil.io.IOUtil;
 
 /**
- *
+ * Implements CAS <code>/proxy</code>. It always returns the same response.
+ * 
  * @author Andrew Post
  */
 public class ProxyServlet extends HttpServlet {
