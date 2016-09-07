@@ -20,6 +20,10 @@
 <cas:serviceResponse xmlns:cas='http://www.yale.edu/tp/cas'>
     <cas:authenticationSuccess>
         <cas:user>superuser</cas:user>
+        <cas:attributes>
+            <cas:organization>eurekaclinical.org</cas:organization>
+            <cas:type>staff</cas:type>
+        </cas:attributes>
         <cas:proxies>
             <cas:proxy>https://localhost:8443/proxyCallback</cas:proxy>
         </cas:proxies>
