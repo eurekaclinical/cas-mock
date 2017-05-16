@@ -16,12 +16,16 @@ It responds to the following [CAS protocol version 2](https://apereo.github.io/c
 
 The responses are hard-coded.
 
-## Requirements
+## Build requirements
+* JDK 8
+* Maven 3.2.5 or greater
+
+## Runtime requirements
 * Java 8
 * Tomcat 7
 
 ## Building it
-The project uses the maven build tool, version 3.2.5 or greater. Typically, you build it by invoking `mvn clean install` at the command line. For simple file changes, not additions or deletions, you can usually use `mvn install`. See https://github.com/eurekaclinical/dev-wiki/wiki/Building-Eureka!-Clinical-projects for more details.
+The project uses the maven build tool. Typically, you build it by invoking `mvn clean install` at the command line. For simple file changes, not additions or deletions, you can usually use `mvn install`. See https://github.com/eurekaclinical/dev-wiki/wiki/Building-Eureka!-Clinical-projects for more details.
 
 ## Maven dependency
 ```
