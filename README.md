@@ -6,7 +6,16 @@ Mock CAS server for system tests of Eureka! Clinical components
 Initial release. Supports all features that Eureka! Clinical uses.
 
 ## What does it do?
-It provides RESTful APIs for users to request an account, manage their profile and change their password. It also provides APIs for an administrator to create accounts.
+When redirecting to CAS, it auto authenticates the user as the `superuser` account. 
+
+It responds to the following URLs:
+* `/login`
+* `/logout`
+* `/serviceValidate`
+* `/proxy`
+* `/proxyValidate`
+
+The responses are hard-coded.
 
 ## Building it
 The project uses the maven build tool. Typically, you build it by invoking `mvn clean install` at the command line. For simple file changes, not additions or deletions, you can usually use `mvn install`. See https://github.com/eurekaclinical/dev-wiki/wiki/Building-Eureka!-Clinical-projects for more details.
