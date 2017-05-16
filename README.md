@@ -8,7 +8,7 @@ Initial release. Supports all features that Eureka! Clinical uses.
 ## What does it do?
 When redirecting to CAS, it auto authenticates the user as the `superuser` account. 
 
-It responds to the following CAS version 2 URLs:
+It responds to the following CAS protocol version 2 URLs:
 * `/login`
 * `/logout`
 * `/serviceValidate`
