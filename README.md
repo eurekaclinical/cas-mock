@@ -17,11 +17,11 @@ It responds to the following [CAS protocol version 2](https://apereo.github.io/c
 The responses are hard-coded.
 
 ## Build requirements
-* JDK 8
+* Oracle JDK 8
 * Maven 3.2.5 or greater
 
 ## Runtime requirements
-* Java 8
+* Oracle Java 8
 * Tomcat 7
 
 ## Building it
