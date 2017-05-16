@@ -1,5 +1,5 @@
 # Mock Eureka! Clinical Central Authentication Service
-Atlanta Clinical and Translational Science Institute (ACTSI), Emory University, Atlanta, GA
+[Atlanta Clinical and Translational Science Institute (ACTSI)](http://www.actsi.org), [Emory University](http://www.emory.edu), Atlanta, GA
 
 ## What does it do?
 It provides a mock CAS server for system tests of Eureka! Clinical components. It responds to the following [CAS protocol version 2](https://apereo.github.io/cas/5.0.x/protocol/CAS-Protocol.html) URLs:
