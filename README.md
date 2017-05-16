@@ -1,5 +1,5 @@
 # Mock Eureka! Clinical Central Authentication Service
-Atlanta Clinical and Translational Science Institute, Emory University, Atlanta, GA
+Atlanta Clinical and Translational Science Institute (ACTSI), Emory University, Atlanta, GA
 
 ## Version history
 ### Version 1.0
