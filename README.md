@@ -3,7 +3,7 @@ Mock CAS server for system tests of Eureka! Clinical components
 
 ## Version history
 ### Version 1.0
-Initial release. Supports all features that Eureka! Clinical uses.
+Initial release. Supports all features of CAS that Eureka! Clinical uses.
 
 ## What does it do?
 
