@@ -1,13 +1,12 @@
 # Mock Eureka! Clinical Central Authentication Service
-Mock CAS server for system tests of Eureka! Clinical components
+Atlanta Clinical and Translational Science Institute, Emory University, Atlanta, GA
 
 ## Version history
 ### Version 1.0
 Initial release. Supports all features of CAS that Eureka! Clinical uses.
 
 ## What does it do?
-
-It responds to the following [CAS protocol version 2](https://apereo.github.io/cas/5.0.x/protocol/CAS-Protocol.html) URLs:
+It provides a mock CAS server for system tests of Eureka! Clinical components. It responds to the following [CAS protocol version 2](https://apereo.github.io/cas/5.0.x/protocol/CAS-Protocol.html) URLs:
 * `/login` (it auto authenticates the user as the `superuser`) 
 * `/logout`
 * `/serviceValidate`
