@@ -6,10 +6,9 @@ Mock CAS server for system tests of Eureka! Clinical components
 Initial release. Supports all features that Eureka! Clinical uses.
 
 ## What does it do?
-When redirecting to CAS, it auto authenticates the user as the `superuser` account. 
 
 It responds to the following CAS protocol version 2 URLs:
-* `/login`
+* `/login` (it auto authenticates the user as the `superuser` account. 
 * `/logout`
 * `/serviceValidate`
 * `/proxy`
