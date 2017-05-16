@@ -7,7 +7,7 @@ Initial release. Supports all features that Eureka! Clinical uses.
 
 ## What does it do?
 
-It responds to the following CAS protocol version 2 URLs:
+It responds to the following [CAS protocol version 2](https://apereo.github.io/cas/5.0.x/protocol/CAS-Protocol.html) URLs:
 * `/login` (it auto authenticates the user as the `superuser`) 
 * `/logout`
 * `/serviceValidate`
