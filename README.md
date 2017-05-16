@@ -18,6 +18,8 @@ The responses are hard-coded.
 
 ## Requirements
 * Java 8
+* Tomcat 7
+* Internet connection (for initial download of dependencies)
 
 ## Building it
 The project uses the maven build tool, version 3.2.5 or greater. Typically, you build it by invoking `mvn clean install` at the command line. For simple file changes, not additions or deletions, you can usually use `mvn install`. See https://github.com/eurekaclinical/dev-wiki/wiki/Building-Eureka!-Clinical-projects for more details.
