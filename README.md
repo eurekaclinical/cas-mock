@@ -27,7 +27,7 @@ Initial release. Supports all features of CAS that Eureka! Clinical uses.
 The project uses the maven build tool. Typically, you build it by invoking `mvn clean install` at the command line. For simple file changes, not additions or deletions, you can usually use `mvn install`. See https://github.com/eurekaclinical/dev-wiki/wiki/Building-Eureka!-Clinical-projects for more details.
 
 ## Installation
-This project is intended for other Eureka! Clinical web applications to depend on it for running in embedded Tomcat. All that is needed is for the tomcat maven plugin to add it as a dependency.
+This project is intended for other Eureka! Clinical web applications to depend on it for running in embedded Tomcat. All that is needed is for the tomcat maven plugin to add it as a dependency, and for Eureka! Clinical web applications to use `https://localhost:8443/cas-mock` as the CAS server URL.
 
 For standalone deployment, do the following:
 1) Stop Tomcat.
