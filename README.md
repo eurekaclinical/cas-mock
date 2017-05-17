@@ -26,6 +26,15 @@ Initial release. Supports all features of CAS that Eureka! Clinical uses.
 ## Building it
 The project uses the maven build tool. Typically, you build it by invoking `mvn clean install` at the command line. For simple file changes, not additions or deletions, you can usually use `mvn install`. See https://github.com/eurekaclinical/dev-wiki/wiki/Building-Eureka!-Clinical-projects for more details.
 
+## Installation
+This project is intended for other Eureka! Clinical web applications to depend on it for running in embedded Tomcat. All that is needed is for the tomcat maven plugin to add it as a dependency.
+
+For standalone deployment, do the following:
+1) Stop Tomcat.
+2) Remove any old copies of the unpacked war from Tomcat's webapps directory.
+3) Copy the warfile into the Tomcat webapps directory, renaming it to remove the version. For example, rename `cas-mock-1.0.war` to `cas-mock.war`.
+4) Start Tomcat.
+
 ## Maven dependency
 ```
 <dependency>
