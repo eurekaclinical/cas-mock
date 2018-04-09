@@ -20,31 +20,13 @@ package org.eurekaclinical.casmock.servlet;
  * #L%
  */
 
-import java.io.IOException;
-import javax.servlet.ServletException;
-import javax.servlet.http.HttpServlet;
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
-import org.arp.javautil.io.IOUtil;
-
 /**
  *
  * @author Andrew Post
  */
-public class ProxyValidateServlet extends HttpServlet {
-    private String response;
+public class ProxyValidateServlet extends AbstractValidateServlet {
 
-    @Override
-    public void init() throws ServletException {
-        try {
-            this.response = IOUtil.readResourceAsString(getClass(), "/xml/proxyValidateResponse.xml");
-        } catch (IOException ex) {
-            throw new AssertionError(ex);
-        }
-    }
-    
-    @Override
-    protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        resp.getWriter().write(this.response);
+    public ProxyValidateServlet() {
+        super("/xml/proxyValidateResponse.xml", "/xml/proxyValidateResponseWithPGTIOU.xml");
     }
 }
