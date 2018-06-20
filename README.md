@@ -11,11 +11,13 @@ It provides a mock CAS server for system tests of Eureka! Clinical components. I
 
 The responses are hard-coded.
 
+Latest release: [![Latest release](https://maven-badges.herokuapp.com/maven-central/org.eurekaclinical/cas-mock/badge.svg)](https://maven-badges.herokuapp.com/maven-central/org.eurekaclinical/cas-mock)
+
 ## Version 2.1
 Support proxy callbacks, which are needed for proxy support to work.
 
 ## Version 2.0
-Updated version of parent pom, which impacts the build.
+No feature changes. This release only updates dependencies.
 
 ## Version 1.0
 Initial release. Supports all features of CAS that Eureka! Clinical uses.
