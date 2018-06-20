@@ -1,5 +1,5 @@
 # Mock Eureka! Clinical Central Authentication Service
-[Atlanta Clinical and Translational Science Institute (ACTSI)](http://www.actsi.org), [Emory University](http://www.emory.edu), Atlanta, GA
+[Georgia Clinical and Translational Science Alliance (Georgia CTSA)](http://www.georgiactsa.org), [Emory University](http://www.emory.edu), Atlanta, GA
 
 ## What does it do?
 It provides a mock CAS server for system tests of Eureka! Clinical components. It responds to the following [CAS protocol version 2](https://apereo.github.io/cas/5.0.x/protocol/CAS-Protocol.html) URLs:
@@ -11,8 +11,13 @@ It provides a mock CAS server for system tests of Eureka! Clinical components. I
 
 The responses are hard-coded.
 
-## Version history
-### Version 1.0
+## Version 2.1
+Support proxy callbacks, which are needed for proxy support to work.
+
+## Version 2.0
+Updated version of parent pom, which impacts the build.
+
+## Version 1.0
 Initial release. Supports all features of CAS that Eureka! Clinical uses.
 
 ## Build requirements
