@@ -13,6 +13,9 @@ See the License for the specific language governing permissions and
 limitations under the License.
 
 This project includes:
+  Apache Commons DBCP under Apache License, Version 2.0
+  Apache Commons Logging under The Apache Software License, Version 2.0
+  Apache Commons Pool under Apache License, Version 2.0
   CAS Mock under Apache License, Version 2.0
   Java Servlet API under CDDL + GPLv2 with classpath exception
   JavaBeans Activation Framework API jar under CDDL/GPLv2+CE
